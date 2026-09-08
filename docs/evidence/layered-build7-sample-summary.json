@@ -1,0 +1,55 @@
+{
+  "onScreenCounts": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    3
+  ],
+  "offScreenRecordIDs": [
+    [
+      43791
+    ],
+    [
+      43791
+    ],
+    [
+      43791
+    ],
+    [
+      43791
+    ],
+    [
+      43791
+    ],
+    [
+      43791
+    ],
+    [
+      43791
+    ],
+    [
+      43791
+    ],
+    [
+      43791
+    ],
+    [
+      43791
+    ]
+  ],
+  "initialAssertionCorrection": "optionAll includes offscreen WindowServer records; count only on-screen records for visible band bound",
+  "metricFirst": "30842   0:01.12  46640",
+  "metricLast": "30842   0:01.33  46672",
+  "sampleSpanSeconds": 15.13,
+  "finalPID": 30842,
+  "finalOnScreenCount": 3,
+  "finalOffscreenIDs": [
+    43903
+  ]
+}

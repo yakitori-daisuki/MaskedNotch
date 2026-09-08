@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/Lakr233/SkyLightWindow",
+  "commit": "a28588bc5222b8daf6c4b46afb462a5d31495685",
+  "license": "MIT",
+  "compiled_derivative": "Sources/MaskedNotch/LockScreen/SkyLightBridge.swift",
+  "sha256": {
+    "LICENSE": "e91b8513dddab41bf4bd0e2deca3f8c40a6ca1723160d2117347b82d03def531",
+    "Package.swift": "33d49281e05180efd125e2f56cc9d36bafa2bc1dc35efdd7cc96ee2e77bb6599",
+    "Package@swift-6.1.swift": "43e14c94e888a02b4a61b3417a2d169f21833c9a19ef38a80b86593efa36d17d",
+    "Sources/SkyLightWindow/SkyLightOperator.swift": "5968b9474fdfbef9061028d02c27b091f54fbbfffa6b9536b582c71f1b1b9a3f",
+    "Sources/SkyLightWindow/SwiftUI+MoveToSky.swift": "ede4d93402af4980486521b040362c929889c2bc8ebe2693dc575fe7854dda37",
+    "Sources/SkyLightWindow/SwiftUI+WindowReader.swift": "1179a7fc8a5c2d95b76b4b58468ae40566bd21b884b73cfc884c4f2a7cdb4b56",
+    "Sources/SkyLightWindow/TopmostWindow.swift": "9ff72cb4aac2687c1e839a5c32736bc79466a2e867707de1c772ec7e5677b3fe",
+    "Sources/SkyLightWindow/TopmostWindowController.swift": "eeed706af61bb8048ab02439e2d122d20c5a4167a8a82de59d360a8be6a4969d"
+  }
+}

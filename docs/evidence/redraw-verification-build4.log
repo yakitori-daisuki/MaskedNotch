@@ -1,0 +1,41 @@
+Timestamp               Ty Process[PID:TID]
+2026-09-08 05:52:44.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:44.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:45.426 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:45.426 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:45.926 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:45.926 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:46.426 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:46.426 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:46.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:46.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:47.425 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:47.425 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:47.927 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:47.927 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:48.428 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:48.428 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:48.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:48.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:49.430 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:49.430 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:49.928 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:49.928 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:50.425 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:50.425 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:50.927 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:50.927 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:51.425 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:51.425 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:51.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:51.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:52.426 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:52.426 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:52.926 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:52.926 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:53.429 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:53.429 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:53.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:53.925 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true
+2026-09-08 05:52:54.427 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 05:52:54.427 Df MaskedNotch[24718:1f11a09] [local.MaskedNotch:Probe] refresh-tick phase=redraw applied=true

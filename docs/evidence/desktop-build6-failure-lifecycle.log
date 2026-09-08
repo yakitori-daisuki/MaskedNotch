@@ -1,0 +1,3 @@
+Timestamp               Ty Process[PID:TID]
+2026-09-08 23:13:47.610 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Lifecycle] launch build=6 placement=aboveWallpaper hideNotch=true
+2026-09-08 23:13:47.658 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Lifecycle] band created mode=desktop level=-1 visible=true activeSpace=true window=42155

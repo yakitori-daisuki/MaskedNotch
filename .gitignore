@@ -1,0 +1,12 @@
+.build/
+.tmp/
+build/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+dist/
+.env
+.env.*
+!.env.example
+*.p12
+*.p8

@@ -1,0 +1,1045 @@
+[
+  {
+    "elapsed": 0.346,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43843,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:05Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.12  46640"
+  },
+  {
+    "elapsed": 2.01,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43845,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:07Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.15  46640"
+  },
+  {
+    "elapsed": 3.693,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43846,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:08Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.17  46928"
+  },
+  {
+    "elapsed": 5.357,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43848,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:10Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.20  46640"
+  },
+  {
+    "elapsed": 6.996,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43850,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:12Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.22  46640"
+  },
+  {
+    "elapsed": 8.645,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43851,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:13Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.24  46672"
+  },
+  {
+    "elapsed": 10.383,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43853,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:15Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.26  46656"
+  },
+  {
+    "elapsed": 12.059,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43856,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:17Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.28  46656"
+  },
+  {
+    "elapsed": 13.792,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43859,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43857,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:18Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.31  46672"
+  },
+  {
+    "elapsed": 15.475,
+    "state": {
+      "applications": [
+        {
+          "activationPolicy": 1,
+          "build": "7",
+          "bundleIdentifier": "local.MaskedNotch.Desktop",
+          "bundlePath": "/Applications/Masked Notch Desktop.app",
+          "desktopPlacement": "aboveWallpaper",
+          "hidden": false,
+          "hideNotch": true,
+          "layeredBands": true,
+          "pid": 30842
+        }
+      ],
+      "bandWindows": [
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": null,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43791,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -2147483622,
+          "kCGWindowNumber": 43755,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": 24,
+          "kCGWindowNumber": 43861,
+          "kCGWindowOwnerPID": 30842
+        },
+        {
+          "kCGWindowAlpha": 1,
+          "kCGWindowBounds": {
+            "Height": 38,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "kCGWindowIsOnscreen": true,
+          "kCGWindowLayer": -1,
+          "kCGWindowNumber": 43756,
+          "kCGWindowOwnerPID": 30842
+        }
+      ],
+      "builtInDisplays": [
+        {
+          "active": true,
+          "bounds": {
+            "Height": 1169,
+            "Width": 1800,
+            "X": 0,
+            "Y": 0
+          },
+          "id": 1,
+          "mirrored": false,
+          "online": true,
+          "safeTop": 38,
+          "scale": 2
+        }
+      ],
+      "capturedAt": "2026-09-08T16:16:20Z",
+      "glassDiffusionPreference": true,
+      "increaseContrast": false,
+      "interfaceStylePreference": "Dark",
+      "limitation": "Settings and window metadata only; final visible pixel colors are not measured.",
+      "menuBarAutoHidePreference": false,
+      "menuBarBackground": {
+        "source": "SLSGetMenuBarUseBlurredAppearance",
+        "value": false
+      },
+      "operatingSystem": "Version 26.6.2 (Build 25G83)",
+      "reduceMotion": false,
+      "reduceTransparency": false,
+      "windowMetadataAvailable": true
+    },
+    "metrics": "30842   0:01.33  46672"
+  }
+]

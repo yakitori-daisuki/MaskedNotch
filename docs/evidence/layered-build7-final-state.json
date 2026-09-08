@@ -1,0 +1,99 @@
+{
+  "applications" : [
+    {
+      "activationPolicy" : 1,
+      "build" : "7",
+      "bundleIdentifier" : "local.MaskedNotch.Desktop",
+      "bundlePath" : "\/Applications\/Masked Notch Desktop.app",
+      "desktopPlacement" : "aboveWallpaper",
+      "hidden" : false,
+      "hideNotch" : true,
+      "layeredBands" : true,
+      "pid" : 30842
+    }
+  ],
+  "bandWindows" : [
+    {
+      "kCGWindowAlpha" : 1,
+      "kCGWindowBounds" : {
+        "Height" : 38,
+        "Width" : 1800,
+        "X" : 0,
+        "Y" : 0
+      },
+      "kCGWindowIsOnscreen" : true,
+      "kCGWindowLayer" : -2147483622,
+      "kCGWindowNumber" : 43755,
+      "kCGWindowOwnerPID" : 30842
+    },
+    {
+      "kCGWindowAlpha" : 1,
+      "kCGWindowBounds" : {
+        "Height" : 38,
+        "Width" : 1800,
+        "X" : 0,
+        "Y" : 0
+      },
+      "kCGWindowIsOnscreen" : null,
+      "kCGWindowLayer" : 24,
+      "kCGWindowNumber" : 43903,
+      "kCGWindowOwnerPID" : 30842
+    },
+    {
+      "kCGWindowAlpha" : 1,
+      "kCGWindowBounds" : {
+        "Height" : 38,
+        "Width" : 1800,
+        "X" : 0,
+        "Y" : 0
+      },
+      "kCGWindowIsOnscreen" : true,
+      "kCGWindowLayer" : 24,
+      "kCGWindowNumber" : 44094,
+      "kCGWindowOwnerPID" : 30842
+    },
+    {
+      "kCGWindowAlpha" : 1,
+      "kCGWindowBounds" : {
+        "Height" : 38,
+        "Width" : 1800,
+        "X" : 0,
+        "Y" : 0
+      },
+      "kCGWindowIsOnscreen" : true,
+      "kCGWindowLayer" : -1,
+      "kCGWindowNumber" : 43756,
+      "kCGWindowOwnerPID" : 30842
+    }
+  ],
+  "builtInDisplays" : [
+    {
+      "active" : true,
+      "bounds" : {
+        "Height" : 1169,
+        "Width" : 1800,
+        "X" : 0,
+        "Y" : 0
+      },
+      "id" : 1,
+      "mirrored" : false,
+      "online" : true,
+      "safeTop" : 38,
+      "scale" : 2
+    }
+  ],
+  "capturedAt" : "2026-09-08T16:18:37Z",
+  "glassDiffusionPreference" : true,
+  "increaseContrast" : false,
+  "interfaceStylePreference" : "Dark",
+  "limitation" : "Settings and window metadata only; final visible pixel colors are not measured.",
+  "menuBarAutoHidePreference" : false,
+  "menuBarBackground" : {
+    "source" : "SLSGetMenuBarUseBlurredAppearance",
+    "value" : false
+  },
+  "operatingSystem" : "Version 26.6.2 (Build 25G83)",
+  "reduceMotion" : false,
+  "reduceTransparency" : false,
+  "windowMetadataAvailable" : true
+}

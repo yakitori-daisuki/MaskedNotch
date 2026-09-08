@@ -1,0 +1,128 @@
+[
+  {
+    "seconds": 1.15,
+    "apps": [
+      {
+        "activationPolicy": 1,
+        "build": "7",
+        "bundleIdentifier": "local.MaskedNotch.Desktop",
+        "bundlePath": "/Volumes/KIOXIA-512GB-20250803/claudecode/masked-notch/build/Variants/Masked Notch Desktop.app",
+        "desktopPlacement": "aboveWallpaper",
+        "hidden": false,
+        "hideNotch": true,
+        "layeredBands": true,
+        "pid": 29207
+      }
+    ],
+    "windows": [
+      {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 38,
+          "Width": 1800,
+          "X": 0,
+          "Y": 0
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 24,
+        "kCGWindowNumber": 43712,
+        "kCGWindowOwnerPID": 29207
+      },
+      {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 38,
+          "Width": 1800,
+          "X": 0,
+          "Y": 0
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 24,
+        "kCGWindowNumber": 43711,
+        "kCGWindowOwnerPID": 29207
+      },
+      {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 38,
+          "Width": 1800,
+          "X": 0,
+          "Y": 0
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": -2147483622,
+        "kCGWindowNumber": 43688,
+        "kCGWindowOwnerPID": 29207
+      },
+      {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 38,
+          "Width": 1800,
+          "X": 0,
+          "Y": 0
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": -1,
+        "kCGWindowNumber": 43689,
+        "kCGWindowOwnerPID": 29207
+      }
+    ],
+    "processMetrics": "29207   0:00.38  46432   1.4"
+  },
+  {
+    "seconds": 3.05,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 4.95,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 6.81,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 8.75,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 10.63,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 12.59,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 14.44,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 16.41,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 18.29,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 20.18,
+    "apps": [],
+    "windows": []
+  },
+  {
+    "seconds": 22.08,
+    "apps": [],
+    "windows": []
+  }
+]

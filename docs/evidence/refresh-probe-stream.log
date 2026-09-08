@@ -1,0 +1,9 @@
+Filtering the log data using "subsystem == "local.MaskedNotch" AND composedMessage BEGINSWITH "refresh-probe""
+Timestamp               Ty Process[PID:TID]
+2026-09-08 00:21:16.890 Df MaskedNotch[41614:1d4e1ec] [local.MaskedNotch:Probe] refresh-probe start phase=baseline seconds=20.0 interval=0.5
+2026-09-08 00:21:37.889 Df MaskedNotch[41614:1d4e1ec] [local.MaskedNotch:Probe] refresh-probe summary phase=baseline completed=true elapsed=21.011351583292708 cpuSeconds=0.005932 cpuPercentOneCore=0.0282 ticks=0 applied=0 skipped=0
+2026-09-08 00:21:37.903 Df MaskedNotch[41614:1d4e1ec] [local.MaskedNotch:Probe] refresh-probe start phase=redraw seconds=40.0 interval=0.5
+2026-09-08 00:22:17.921 Df MaskedNotch[41614:1d4e1ec] [local.MaskedNotch:Probe] refresh-probe summary phase=redraw completed=true elapsed=40.03318962501362 cpuSeconds=0.053449 cpuPercentOneCore=0.1335 ticks=79 applied=79 skipped=0
+2026-09-08 00:22:17.935 Df MaskedNotch[41614:1d4e1ec] [local.MaskedNotch:Probe] refresh-probe start phase=order seconds=40.0 interval=0.5
+2026-09-08 00:22:57.954 Df MaskedNotch[41614:1d4e1ec] [local.MaskedNotch:Probe] refresh-probe summary phase=order completed=true elapsed=40.03324666665867 cpuSeconds=0.247640 cpuPercentOneCore=0.6186 ticks=79 applied=79 skipped=0
+2026-09-08 00:22:57.965 Df MaskedNotch[41614:1d4e1ec] [local.MaskedNotch:Probe] refresh-probe finished; periodic updates removed

@@ -1,0 +1,19 @@
+Test Suite 'All tests' started at 2026-09-07 05:56:07.282.
+Test Suite 'MaskedNotchTests.xctest' started at 2026-09-07 05:56:07.283.
+Test Suite 'GeometryTests' started at 2026-09-07 05:56:07.283.
+Test Suite 'GeometryTests' passed at 2026-09-07 05:56:07.292.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.008) seconds
+Test Suite 'PanelTests' started at 2026-09-07 05:56:07.292.
+Test Suite 'PanelTests' passed at 2026-09-07 05:56:07.488.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.195 (0.196) seconds
+Test Suite 'PreferencesTests' started at 2026-09-07 05:56:07.488.
+Test Suite 'PreferencesTests' passed at 2026-09-07 05:56:07.493.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.004 (0.005) seconds
+Test Suite 'StateTests' started at 2026-09-07 05:56:07.493.
+Test Suite 'StateTests' passed at 2026-09-07 05:56:07.501.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.005 (0.008) seconds
+Test Suite 'MaskedNotchTests.xctest' passed at 2026-09-07 05:56:07.501.
+	 Executed 22 tests, with 0 failures (0 unexpected) in 0.211 (0.218) seconds
+Test Suite 'All tests' passed at 2026-09-07 05:56:07.502.
+	 Executed 22 tests, with 0 failures (0 unexpected) in 0.211 (0.219) seconds
+** TEST SUCCEEDED **

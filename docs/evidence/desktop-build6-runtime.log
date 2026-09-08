@@ -1,0 +1,16 @@
+Timestamp               Ty Process[PID:TID]
+2026-09-08 23:13:47.610 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] launch final probe=false
+2026-09-08 23:13:47.610 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Lifecycle] launch build=6 placement=aboveWallpaper hideNotch=true
+2026-09-08 23:13:47.648 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] menu hide=true login=1 items=3
+2026-09-08 23:13:47.654 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] refresh ownConsole=true locked=Optional(false) mode=desktop target=Optional(MaskedNotch.DisplayGeometry(id: 1, builtIn: true, active: true, mirrored: false, frame: (0.0, 0.0, 1800.0, 1169.0), safeTop: 38.0, auxiliaryLeft: Optional((0.0, 1131.0, 790.0, 38.0)), auxiliaryRight: Optional((1010.0, 1131.0, 790.0, 38.0)), scale: 2.0))
+2026-09-08 23:13:47.657 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 23:13:47.658 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] ordered mode=desktop desktopPlacement=aboveWallpaper level=-1 visible=true key=false mouseIgnored=true frame=(0.0, 1131.0, 1800.0, 38.0)
+2026-09-08 23:13:47.658 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Lifecycle] band created mode=desktop level=-1 visible=true activeSpace=true window=42155
+2026-09-08 23:13:47.658 I  MaskedNotch[71830:238337c] [local.MaskedNotch:Overlay] Band ordered: mode=desktop display=1 frame=(0.0, 1131.0, 1800.0, 38.0)
+2026-09-08 23:13:47.658 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 23:13:47.836 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] refresh ownConsole=true locked=Optional(false) mode=desktop target=Optional(MaskedNotch.DisplayGeometry(id: 1, builtIn: true, active: true, mirrored: false, frame: (0.0, 0.0, 1800.0, 1169.0), safeTop: 38.0, auxiliaryLeft: Optional((0.0, 1131.0, 790.0, 38.0)), auxiliaryRight: Optional((1010.0, 1131.0, 790.0, 38.0)), scale: 2.0))
+2026-09-08 23:13:47.837 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 23:13:48.190 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] refresh ownConsole=true locked=Optional(false) mode=desktop target=Optional(MaskedNotch.DisplayGeometry(id: 1, builtIn: true, active: true, mirrored: false, frame: (0.0, 0.0, 1800.0, 1169.0), safeTop: 38.0, auxiliaryLeft: Optional((0.0, 1131.0, 790.0, 38.0)), auxiliaryRight: Optional((1010.0, 1131.0, 790.0, 38.0)), scale: 2.0))
+2026-09-08 23:13:48.190 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
+2026-09-08 23:13:49.236 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] refresh ownConsole=true locked=Optional(false) mode=desktop target=Optional(MaskedNotch.DisplayGeometry(id: 1, builtIn: true, active: true, mirrored: false, frame: (0.0, 0.0, 1800.0, 1169.0), safeTop: 38.0, auxiliaryLeft: Optional((0.0, 1131.0, 790.0, 38.0)), auxiliaryRight: Optional((1010.0, 1131.0, 790.0, 38.0)), scale: 2.0))
+2026-09-08 23:13:49.236 Df MaskedNotch[71830:238337c] [local.MaskedNotch:Probe] black-surface submitted pixels=1x1 alpha=1
