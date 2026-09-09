@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One diagnostic image of the top strip, gated to the displayed Desktop 2.
+"""One diagnostic image of the top strip, gated to a specified displayed desktop (default: Desktop 2).
 
 Does not switch Spaces or change permissions, preferences, wallpaper, or apps.
 This is an operational scope check, not a macOS per-Space permission boundary.
@@ -16,24 +16,25 @@ import time
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def space(wait=False):
+def space(wait=False, desktop=2):
     command = ["xcrun", "swift", "-module-cache-path", "build/ModuleCache", "script/inspect_spaces.swift"]
     if wait:
-        command.append("--wait-for-desktop-2")
+        command.append(f"--wait-for-desktop-{desktop}")
     result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=55)
     if result.returncode:
-        raise RuntimeError("Desktop 2 is not ready; no image captured. " + result.stdout.strip() + result.stderr.strip())
+        raise RuntimeError(f"Desktop {desktop} is not ready; no image captured. " + result.stdout.strip() + result.stderr.strip())
     state = json.loads(result.stdout)
-    if not state.get("isDesktop2"):
-        raise RuntimeError("Desktop 2 is not displayed; no image captured.")
+    if state.get("currentDesktopNumber") != desktop:
+        raise RuntimeError(f"Desktop {desktop} is not displayed; no image captured.")
     return state
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--wait", action="store_true", help="Wait up to 45 seconds for Desktop 2.")
+    parser.add_argument("--desktop", type=int, choices=[1, 2], default=2, help="Explicitly select the authorized desktop; defaults to 2.")
     args = parser.parse_args()
-    initial = space(wait=args.wait)
+    initial = space(wait=args.wait, desktop=args.desktop)
     state = json.loads(subprocess.check_output(
         [str(ROOT / "script/build_and_run.sh"), "--inspect"], cwd=ROOT, text=True, timeout=10))
     displays = state["builtInDisplays"]
@@ -47,7 +48,7 @@ def main():
     if not 0 < height < 100 or width <= 0 or any(float(v) != int(v) for v in (x, y, width, height)):
         raise RuntimeError("Invalid top strip bounds; no image captured.")
     time.sleep(0.2)
-    before = space()
+    before = space(desktop=args.desktop)
     if before["currentSpaceID"] != initial["currentSpaceID"]:
         raise RuntimeError("Space changed during preparation; no image captured.")
     directory = ROOT / "build/desktop2-review"
@@ -57,7 +58,7 @@ def main():
     rect = ",".join(str(int(v)) for v in (x, y, width, height))
     try:
         subprocess.run(["/usr/sbin/screencapture", "-x", "-R" + rect, str(image)], check=True, timeout=10)
-        after = space()
+        after = space(desktop=args.desktop)
         if after["currentSpaceID"] != before["currentSpaceID"]:
             raise RuntimeError("Space changed during capture; image discarded without inspection.")
         raw = image.read_bytes()
@@ -71,7 +72,7 @@ def main():
         image.unlink(missing_ok=True)
         raise
     manifest = {
-        "image": str(image), "scope": "Desktop 2, built-in display, top strip only",
+        "image": str(image), "scope": f"Desktop {args.desktop}, built-in display, top strip only",
         "before": before, "after": after, "rectPoints": [x, y, width, height],
         "imagePixels": pixels, "appState": state,
     }

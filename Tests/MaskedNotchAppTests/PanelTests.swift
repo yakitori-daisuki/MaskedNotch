@@ -107,6 +107,20 @@ final class PanelTests: XCTestCase {
         XCTAssertFalse(panel.isVisible)
     }
 
+    @MainActor func testActiveDesktopExperimentKeepsLockPolicySeparate() {
+        _ = NSApplication.shared
+        for locked in [false, true] {
+            let panel = BandPanel(frame: CGRect(x: 0, y: 0, width: 500, height: 38), locked: locked,
+                                  desktopScope: .activeDesktop)
+            defer { panel.close() }
+            XCTAssertFalse(panel.collectionBehavior.contains(.canJoinAllSpaces))
+            XCTAssertEqual(panel.collectionBehavior.contains(.moveToActiveSpace), !locked)
+            XCTAssertEqual(panel.collectionBehavior.contains(.fullScreenAuxiliary), locked)
+            XCTAssertFalse(panel.canBecomeKey)
+            XCTAssertTrue(panel.ignoresMouseEvents)
+        }
+    }
+
     /// Check the band's own pixels, independently of WindowServer/menu compositing.
     @MainActor func testBlackLayerCoversEntireResizedSurfaceAtEachScale() throws {
         _ = NSApplication.shared

@@ -34,7 +34,7 @@ final class StatusMenu: NSObject, NSMenuDelegate {
         let stateDescription = preferences.enabled ? NSLocalizedString("Hide Notch: On", comment: "") : NSLocalizedString("Hide Notch: Off", comment: "")
         statusItem.button?.image = StatusIcon.image(hidingNotch: preferences.enabled)
         let variant = Bundle.main.object(forInfoDictionaryKey: "MaskedNotchRefreshVariant") as? String
-        statusItem.button?.title = LayeredBandStack.configured ? NSLocalizedString(" Layered", comment: "") :
+        statusItem.button?.title = LayeredBandStack.configured ? "" :
             DesktopBandPlacement.configured == .aboveWallpaper ? NSLocalizedString(" Background", comment: "") :
             variant == "blink" ? NSLocalizedString(" Blink", comment: "") : variant == "redraw" ? " A" : variant == "order" ? " B" : ""
         statusItem.button?.toolTip = "Masked Notch — \(stateDescription)" + (probeDescription.map { String(format: NSLocalizedString("\nTest: %@", comment: ""), $0) } ?? "")

@@ -8,6 +8,7 @@ final class OverlayController {
     private var layeredStack: LayeredBandStack?
     private var layeredTicks = 0
     private let usesLayeredBands = LayeredBandStack.configured
+    private let desktopMenuScope: DesktopBandScope
     private let variantRefresh = VariantRefresh()
     private let blinkPulse = BlinkPulse()
     private let desktopPlacement = DesktopBandPlacement.configured
@@ -27,12 +28,16 @@ final class OverlayController {
     private var retries: [DispatchWorkItem] = []
     private var presentationObservation: NSKeyValueObservation?
     private var activeSpaceObservation: NSKeyValueObservation?
+    private weak var observedSpacePanel: BandPanel?
     private let logger = Logger(subsystem: "local.MaskedNotch", category: "Overlay")
     var issue: ((String) -> Void)?
     var unlocked: (() -> Void)?
     var willHideForSession: (() -> Void)?
 
-    init(enabled: Bool) { state = DisplayState(enabled: enabled) }
+    init(enabled: Bool, desktopMenuScope: DesktopBandScope = .allDesktops) {
+        state = DisplayState(enabled: enabled)
+        self.desktopMenuScope = desktopMenuScope
+    }
 
     func start() {
         guard observers.isEmpty, !state.terminating else { return }
@@ -45,7 +50,10 @@ final class OverlayController {
         observe(NotificationCenter.default, NSApplication.didBecomeActiveNotification) { $0.refreshWithRetries() }
         observe(NotificationCenter.default, NSApplication.didResignActiveNotification) { $0.refreshWithRetries() }
         let workspace = NSWorkspace.shared.notificationCenter
-        observe(workspace, NSWorkspace.activeSpaceDidChangeNotification) { $0.refreshWithRetries() }
+        observe(workspace, NSWorkspace.activeSpaceDidChangeNotification) {
+            $0.layeredStack?.requestSpaceRefresh()
+            $0.refreshWithRetries()
+        }
         observe(workspace, NSWorkspace.didActivateApplicationNotification) { $0.refreshWithRetries() }
         observe(workspace, NSWorkspace.sessionDidResignActiveNotification) {
             $0.state.ownConsole = false; $0.cancelRetries(); $0.willHideForSession?(); $0.withdraw()
@@ -126,6 +134,7 @@ final class OverlayController {
         }
         layeredTicks += 1
         stack.refresh(replaceMenu: layeredTicks % 2 == 0)
+        if let base = stack.panels.first { observeActiveSpace(of: base) }
         Diagnostics.record("layered tick=\(layeredTicks) count=\(stack.panels.count)")
     }
 
@@ -165,12 +174,12 @@ final class OverlayController {
         if mode != shownMode || geometry != shownGeometry || (panel == nil && layeredStack == nil) {
             withdraw()
             if mode == .desktop && usesLayeredBands {
-                let stack = LayeredBandStack(frame: frame, displayID: geometry.id)
+                let stack = LayeredBandStack(frame: frame, displayID: geometry.id, menuScope: desktopMenuScope)
                 layeredStack = stack
                 shownMode = mode
                 shownGeometry = geometry
                 stack.refresh()
-                // A base band survives replacement of the upper band.
+                // Follow the first base; Space renewal may replace it later.
                 observeActiveSpace(of: stack.panels[0])
                 for band in stack.panels {
                     Diagnostics.event("band created mode=desktop rendering=\(band.rendering.rawValue) level=\(band.level.rawValue) visible=\(band.isVisible) activeSpace=\(band.isOnActiveSpace) window=\(band.windowNumber)")
@@ -205,6 +214,7 @@ final class OverlayController {
         // Geometry may be unchanged even after WindowServer changes same-level ordering.
         if mode == .desktop, let stack = layeredStack {
             stack.refresh()
+            if let base = stack.panels.first { observeActiveSpace(of: base) }
             variantRefresh.start { [weak self] in self?.refreshLayeredBands() }
         } else if mode == .desktop, let panel {
             panel.restoreDesktopOrder(displayID: geometry.id)
@@ -224,6 +234,7 @@ final class OverlayController {
         variantRefresh.stop()
         activeSpaceObservation?.invalidate()
         activeSpaceObservation = nil
+        observedSpacePanel = nil
         let count = (layeredStack?.panels.count ?? 0) + (panel == nil ? 0 : 1)
         if count > 0 {
             Diagnostics.event("band withdrawn count=\(count) previous=\(shownMode) enabled=\(state.enabled) sleeping=\(state.sleeping) ownConsole=\(state.ownConsole) locked=\(String(describing: state.locked)) target=\(state.targetAvailable) suppressed=\(state.desktopSuppressed) lockUnavailable=\(state.lockUnavailable) terminating=\(state.terminating)")
@@ -243,6 +254,9 @@ final class OverlayController {
     }
 
     private func observeActiveSpace(of panel: BandPanel) {
+        guard observedSpacePanel !== panel else { return }
+        activeSpaceObservation?.invalidate()
+        observedSpacePanel = panel
         activeSpaceObservation = panel.observe(\.isOnActiveSpace, options: [.new]) { [weak self] _, _ in
             guard self?.blinkPulse.isPending != true else { return }
             DispatchQueue.main.async { self?.refreshWithRetries() }

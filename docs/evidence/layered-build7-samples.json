@@ -6,7 +6,7 @@
         "activationPolicy": 1,
         "build": "7",
         "bundleIdentifier": "local.MaskedNotch.Desktop",
-        "bundlePath": "/Volumes/KIOXIA-512GB-20250803/claudecode/masked-notch/build/Variants/Masked Notch Desktop.app",
+        "bundlePath": "build/Variants/Masked Notch Desktop.app",
         "desktopPlacement": "aboveWallpaper",
         "hidden": false,
         "hideNotch": true,

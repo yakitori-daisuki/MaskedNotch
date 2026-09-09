@@ -32,12 +32,17 @@ enum BandRendering: String {
     case windowFill
 }
 
+enum DesktopBandScope: String {
+    case allDesktops
+    case activeDesktop
+}
+
 final class BandPanel: NSPanel {
     private let desktopPlacement: DesktopBandPlacement
     let rendering: BandRendering
 
     init(frame: CGRect, locked: Bool, desktopPlacement: DesktopBandPlacement = .underMenu,
-         rendering: BandRendering = .layerPixels) {
+         rendering: BandRendering = .layerPixels, desktopScope: DesktopBandScope = .allDesktops) {
         // The desktop experiment must not lower the panel inside the lock Space.
         self.desktopPlacement = locked ? .underMenu : desktopPlacement
         self.rendering = rendering
@@ -64,6 +69,10 @@ final class BandPanel: NSPanel {
         collectionBehavior = locked
             ? [.stationary, .ignoresCycle, .fullScreenAuxiliary]
             : [.stationary, .ignoresCycle, .canJoinAllSpaces, .fullScreenNone, .fullScreenDisallowsTiling]
+        if !locked && desktopScope == .activeDesktop {
+            collectionBehavior.remove(.canJoinAllSpaces)
+            collectionBehavior.insert(.moveToActiveSpace)
+        }
         let contentFrame = CGRect(origin: .zero, size: frame.size)
         switch rendering {
         case .layerPixels: contentView = BlackView(frame: contentFrame)

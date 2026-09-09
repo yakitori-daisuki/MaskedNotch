@@ -15,17 +15,15 @@ func menuBarBackground() -> [String: Any] {
         return ["value": NSNull(), "error": "SkyLight unavailable"]
     }
     defer { dlclose(handle) }
-    guard let connectionSymbol = dlsym(handle, "SLSMainConnectionID"),
-          let readSymbol = dlsym(handle, "SLSGetMenuBarUseBlurredAppearance") else {
+    guard let readSymbol = dlsym(handle, "SLSGetMenuBarUseBlurredAppearance") else {
         return ["value": NSNull(), "error": "Read-only SPI unavailable"]
     }
-    let connection = unsafeBitCast(connectionSymbol, to: (@convention(c) () -> Int32).self)
-    let read = unsafeBitCast(readSymbol, to: (@convention(c) (Int32) -> Bool).self)
-    let cid = connection()
-    guard cid != 0 else {
-        return ["value": NSNull(), "error": "No WindowServer connection"]
-    }
-    return ["value": read(cid), "source": "SLSGetMenuBarUseBlurredAppearance"]
+    // Verified against this Mac's local implementation: no parameters; reads
+    // SLSMenuBarUseBlurredAppearance. This is NOT the Liquid Glass preference.
+    let read = unsafeBitCast(readSymbol, to: (@convention(c) () -> Bool).self)
+    return ["value": read(), "source": "SLSGetMenuBarUseBlurredAppearance",
+            "preferenceKey": "SLSMenuBarUseBlurredAppearance",
+            "scope": "Blur preference only; does not establish that the rendered menu bar is transparent."]
 }
 
 let applications = NSWorkspace.shared.runningApplications.filter {
@@ -76,10 +74,33 @@ let displays: [[String: Any]] = NSScreen.screens.compactMap { screen in
 }
 
 let global = UserDefaults.standard
+func activeMenuDrawingStyle() -> [String: Any] {
+    guard let handle = dlopen("/System/Library/PrivateFrameworks/SkyLight.framework/SkyLight", RTLD_NOW) else {
+        return ["error": "SkyLight unavailable"]
+    }
+    defer { dlclose(handle) }
+    guard let connectionSymbol = dlsym(handle, "SLSMainConnectionID"),
+          let symbol = dlsym(handle, "SLSGetActiveMenuBarDrawingStyle") else {
+        return ["error": "Read-only drawing style API unavailable"]
+    }
+    let connection = unsafeBitCast(connectionSymbol, to: (@convention(c) () -> Int32).self)()
+    guard connection != 0 else { return ["error": "No WindowServer connection"] }
+    // Verified locally: connection, pointer to a 32-bit style; CGError result.
+    let read = unsafeBitCast(symbol, to: (@convention(c) (Int32, UnsafeMutablePointer<Int32>) -> Int32).self)
+    var style: Int32 = -1
+    let status = read(connection, &style)
+    return ["status": status, "rawStyle": status == 0 ? style as Any : NSNull(),
+            "source": "SLSGetActiveMenuBarDrawingStyle",
+            "limitation": "Raw system style only; not a pixel measurement or transparency guarantee."]
+}
+let glassPreference = (global.object(forKey: "NSGlassDiffusionSetting") as? NSNumber)
+    ?? (global.object(forKey: "NSLiquidGlassSetting") as? NSNumber)
 let report: [String: Any] = [
     "capturedAt": ISO8601DateFormatter().string(from: Date()),
     "operatingSystem": ProcessInfo.processInfo.operatingSystemVersionString,
     "menuBarBackground": menuBarBackground(),
+    "activeMenuDrawingStyle": activeMenuDrawingStyle(),
+    "frontmostBundleIdentifier": NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "unknown",
     "reduceTransparency": NSWorkspace.shared.accessibilityDisplayShouldReduceTransparency,
     "increaseContrast": NSWorkspace.shared.accessibilityDisplayShouldIncreaseContrast,
     "reduceMotion": NSWorkspace.shared.accessibilityDisplayShouldReduceMotion,
@@ -87,6 +108,7 @@ let report: [String: Any] = [
     "interfaceStylePreference": global.object(forKey: "AppleInterfaceStyle") ?? NSNull(),
     // Raw value only: this is distinct from Show Menu Bar Background.
     "glassDiffusionPreference": global.object(forKey: "NSGlassDiffusionSetting") ?? NSNull(),
+    "liquidGlassPreferredLook": glassPreference.map { $0.boolValue ? "tinted" : "clear" } ?? "systemDefault",
     "applications": appStates,
     "windowMetadataAvailable": allWindows != nil,
     "bandWindows": bandWindows,

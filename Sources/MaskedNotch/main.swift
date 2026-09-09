@@ -27,7 +27,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         Diagnostics.record("launch final probe=\(probeSeconds != nil)")
         let preferences = Preferences()
         Diagnostics.event("launch build=\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "unknown") placement=\(DesktopBandPlacement.configured.rawValue) layered=\(LayeredBandStack.configured) hideNotch=\(preferences.enabled)")
-        let controller = OverlayController(enabled: preferences.enabled)
+        // A bounded diagnostic only. Never alter the normal-launch policy.
+        let menuScope: DesktopBandScope = probeSeconds != nil && arguments.contains("--probe-active-desktop-band")
+            ? .activeDesktop : .allDesktops
+        Diagnostics.record("desktop menu scope=\(menuScope.rawValue)")
+        let controller = OverlayController(enabled: preferences.enabled, desktopMenuScope: menuScope)
         let alerts = DeferredAlerts(overlay: controller)
         self.alerts = alerts
         overlay = controller
