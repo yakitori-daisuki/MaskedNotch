@@ -14,6 +14,50 @@
 
 外部画面、ミラーリング、無効な画面、ノッチのない画面には表示しません。メニューはmacOSの優先言語に従い日本語・英語を選び、対応言語がなければ英語になります。言語を変更したあとは再起動してください。
 
+## 1回のコピペでインストール
+
+事前にファイルをダウンロードする必要はありません。下のコードブロック全体を右上のコピーボタンでコピーし、ターミナルへ貼り付けてReturnキーを押してください。**macOS 26以降のApple Silicon Mac用**で、Xcode・Homebrewは不要です。起動中のMasked Notchや実験版があれば先に終了してください。
+
+配布版は [v0.1.0-preview.1（試用版）](https://github.com/yakitori-daisuki/MaskedNotch/releases/tag/v0.1.0-preview.1) です。黒帯が消える既知の問題と、ロック画面の未検証事項が残っています。
+
+> このコマンドはDeveloper ID署名・公証のないアプリを導入し、そのアプリのquarantine属性解除を許可します。このリポジトリを信頼できる場合だけ実行してください。
+
+```sh
+/bin/bash -c '
+set -euo pipefail
+umask 077
+case "${1:-}" in ""|--verify-only) ;; *) echo "Usage: $0 [--verify-only]" >&2; exit 2 ;; esac
+base="https://github.com/yakitori-daisuki/MaskedNotch/releases/download/v0.1.0-preview.1"
+name="MaskedNotch-install-unsigned.sh"
+temp_root="${TMPDIR:-/tmp}"
+work="$(/usr/bin/mktemp -d "${temp_root%/}/masked-notch-download.XXXXXX")"
+cleanup() { /bin/rm -rf "$work"; }
+trap cleanup EXIT
+trap "exit 130" HUP INT TERM
+cd "$work"
+for file in "$name" "$name.sha256"; do
+  /usr/bin/curl --disable --fail --silent --show-error --location \
+    --max-redirs 10 --proto "=https" --proto-redir "=https" \
+    --connect-timeout 20 --max-time 600 --retry 3 \
+    --output "$file" "$base/$file"
+done
+read -r expected listed extra < "$name.sha256"
+[[ -z "${extra:-}" && "$listed" == "$name" && ${#expected} -eq 64 && "$expected" != *[!0-9a-f]* ]] || { echo "Invalid checksum manifest" >&2; exit 1; }
+[[ "$(/usr/bin/wc -l < "$name.sha256")" -eq 1 ]] || { echo "Expected one checksum" >&2; exit 1; }
+/usr/bin/shasum -a 256 -c "$name.sha256"
+if [[ "${1:-}" == --verify-only ]]; then
+  /bin/bash "$name" --verify-only
+else
+  if [[ -d /Applications && -w /Applications ]]; then scope="--system"; else scope="--user"; fi
+  /bin/bash "$name" "$scope" --allow-unsigned
+fi
+'
+```
+
+コマンドがGitHubからインストーラとSHA-256ファイルを一時フォルダへ自動取得し、検証後にインストール・起動します。書き込み可能なら `/Applications/Masked Notch.app`、それ以外は `~/Applications/Masked Notch.app` に導入します。管理者パスワードは不要です。既存の通常版は日時付きバックアップとして残し、一時ダウンロードは終了時に削除します。
+
+インストーラとチェックサムは同じReleaseから取得します。チェックサムは破損・取り違えを検出しますが、配布元自体が侵害された場合の独立した証明ではありません。GatekeeperやSIPの設定、ログイン時起動の設定は変更しません。
+
 ## ソースからビルド・起動
 
 リポジトリのフォルダで実行します。
@@ -53,7 +97,7 @@ MASKED_NOTCH_CONFIGURATION=Release ./script/build_and_run.sh --build
 
 ### ダウンロードしたビルドをインストール
 
-**公開インストーラのリリースはまだありません。** 以下は2つのファイルを一緒に受け取った場合、または今後のReleaseから取得した場合の手順です。[リリース手順](docs/RELEASING.md)も参照してください。
+通常は上の「1回のコピペ」を使ってください。以下は[Release](https://github.com/yakitori-daisuki/MaskedNotch/releases/tag/v0.1.0-preview.1)のファイルを個別に取得して確認したい場合の手順です。[リリース手順](docs/RELEASING.md)も参照してください。
 
 このビルドは**Developer ID署名・Appleの公証を受けていません**。ad-hoc署名は配布者の本人性を証明しません。配布元を信頼できる場合だけ導入してください。`--allow-unsigned` は、このアプリのquarantine属性を解除することへの明示的な同意です。GatekeeperやSIPの設定は変更しません。同じ配布元のチェックサムは破損・取り違えの検出用であり、配布元自体の侵害に対する独立した証明ではありません。
 

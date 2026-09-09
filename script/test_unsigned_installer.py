@@ -6,12 +6,25 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+import re
+import shlex
 
 ROOT = Path(__file__).resolve().parent.parent
 INSTALLER = ROOT / "dist/MaskedNotch-install-unsigned.sh"
 
 
 class InstallerTests(unittest.TestCase):
+    def test_readme_download_commands_match(self):
+        source = (ROOT / "script/install_from_release.sh").read_text().split("\n", 1)[1]
+        for filename in ("README.md", "README.ja.md"):
+            blocks = re.findall(r"```sh\n(.*?)\n```", (ROOT / filename).read_text(), re.S)
+            commands = [block for block in blocks if block.startswith("/bin/bash -c")]
+            self.assertEqual(len(commands), 1)
+            args = shlex.split(commands[0])
+            self.assertEqual(args[:2], ["/bin/bash", "-c"])
+            self.assertEqual(args[2], "\n" + source)
+            subprocess.run(["/bin/bash", "-n", "-c", args[2]], check=True)
+
     def run_installer(self, *args, path=INSTALLER):
         # Keep extraction and cleanup entirely under this checkout.
         import os

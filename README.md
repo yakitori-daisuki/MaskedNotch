@@ -14,6 +14,50 @@ A small Swift/AppKit menu bar app that draws a black strip across the top of a b
 
 External, mirrored, offline, and non-notched displays are excluded. Menus support English and Japanese, following macOS language preferences with English as the fallback. Restart after changing the language.
 
+## Install with one copy and paste
+
+No advance download is needed. Copy the entire code block using its copy button, paste it into Terminal, and press Return. Requires **macOS 26 or later on Apple Silicon**; no Xcode or Homebrew. Quit Masked Notch and any experimental variants first.
+
+This installs [v0.1.0-preview.1 (experimental)](https://github.com/yakitori-daisuki/MaskedNotch/releases/tag/v0.1.0-preview.1). The disappearing-strip issue and unverified lock-screen behavior remain.
+
+> This command installs an app without Developer ID signing or Apple notarization and permits removal of that app's quarantine attribute. Run it only if you trust this repository.
+
+```sh
+/bin/bash -c '
+set -euo pipefail
+umask 077
+case "${1:-}" in ""|--verify-only) ;; *) echo "Usage: $0 [--verify-only]" >&2; exit 2 ;; esac
+base="https://github.com/yakitori-daisuki/MaskedNotch/releases/download/v0.1.0-preview.1"
+name="MaskedNotch-install-unsigned.sh"
+temp_root="${TMPDIR:-/tmp}"
+work="$(/usr/bin/mktemp -d "${temp_root%/}/masked-notch-download.XXXXXX")"
+cleanup() { /bin/rm -rf "$work"; }
+trap cleanup EXIT
+trap "exit 130" HUP INT TERM
+cd "$work"
+for file in "$name" "$name.sha256"; do
+  /usr/bin/curl --disable --fail --silent --show-error --location \
+    --max-redirs 10 --proto "=https" --proto-redir "=https" \
+    --connect-timeout 20 --max-time 600 --retry 3 \
+    --output "$file" "$base/$file"
+done
+read -r expected listed extra < "$name.sha256"
+[[ -z "${extra:-}" && "$listed" == "$name" && ${#expected} -eq 64 && "$expected" != *[!0-9a-f]* ]] || { echo "Invalid checksum manifest" >&2; exit 1; }
+[[ "$(/usr/bin/wc -l < "$name.sha256")" -eq 1 ]] || { echo "Expected one checksum" >&2; exit 1; }
+/usr/bin/shasum -a 256 -c "$name.sha256"
+if [[ "${1:-}" == --verify-only ]]; then
+  /bin/bash "$name" --verify-only
+else
+  if [[ -d /Applications && -w /Applications ]]; then scope="--system"; else scope="--user"; fi
+  /bin/bash "$name" "$scope" --allow-unsigned
+fi
+'
+```
+
+The command downloads the installer and SHA-256 file from GitHub into a temporary folder, verifies them, then installs and launches the app. It uses `/Applications/Masked Notch.app` when writable, otherwise `~/Applications/Masked Notch.app`. No administrator password is needed. An existing standard installation is preserved as a timestamped backup; temporary downloads are removed on exit.
+
+Both files come from the same release. The checksum detects damage and mismatches, not a compromised publisher. Gatekeeper, SIP, and launch-at-login settings are not changed.
+
 ## Build and run
 
 From the repository folder:
@@ -53,7 +97,7 @@ This builds the **standard** arm64 Release app, verifies its ad-hoc signature, h
 
 ### Install a downloaded build
 
-**No public installer release is available yet.** These instructions apply after receiving both files together or downloading them from a release. See the [release guide](docs/RELEASING.md).
+Normally use the one-copy command above. These optional instructions are for inspecting files downloaded individually from the [release](https://github.com/yakitori-daisuki/MaskedNotch/releases/tag/v0.1.0-preview.1). See the [release guide](docs/RELEASING.md).
 
 This build is **not Developer ID signed or notarized by Apple**. Ad-hoc signing does not identify the publisher. Only install from a source you trust. `--allow-unsigned` explicitly permits removing this app's quarantine attribute; it does not change Gatekeeper or SIP settings. Checksums from the same source detect damage or mismatches, not a compromised publisher.
 

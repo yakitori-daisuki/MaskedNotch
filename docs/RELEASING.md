@@ -1,5 +1,19 @@
 # Release guide / リリース手順
 
+## One-copy installer / コピペ用インストーラ
+
+The READMEs contain the complete download-and-install command, sourced from `script/install_from_release.sh`. The public experimental release is `v0.1.0-preview.1` (standard app 0.1.0, build 9, arm64). Update the pinned tag in the script and both README commands together for the next release; do not overwrite existing release assets.
+
+日英READMEの「1回のコピペ」は `script/install_from_release.sh` と同じ処理です。公開試用版は `v0.1.0-preview.1`（通常版0.1.0、Build 9、arm64）。次の配布時は新しいタグを発行し、スクリプトと両READMEの取得先を一緒に更新してください。
+
+After publishing, test the exact README command through its verification-only argument to exercise public downloads without installing or launching the app. The equivalent repository command is:
+
+```sh
+./script/install_from_release.sh --verify-only
+```
+
+これは公開URLからの取得・チェックサム・内蔵アプリ署名までの確認です。実際の配置・更新・起動や、別のMacでの実機検証とは区別してください。
+
 ## Build and verify / ビルド・検証
 
 On an Apple Silicon Mac with full Xcode and the macOS 26 SDK:
