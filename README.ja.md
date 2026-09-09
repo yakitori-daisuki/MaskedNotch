@@ -18,7 +18,7 @@
 
 リポジトリのフォルダで実行します。
 
-ソースの取得は `git clone https://github.com/yakitori-daisuki/MaskedNotch.git`、移動は `cd MaskedNotch` です。非公開リポジトリへのアクセスには権限が必要です。この作業フォルダ専用のGitHubアカウント設定は[設定手順](docs/GITHUB_SETUP.ja.md)を参照してください。
+ソースの取得は `git clone https://github.com/yakitori-daisuki/MaskedNotch.git`、移動は `cd MaskedNotch` です。この作業フォルダ専用のGitHubアカウント設定は[設定手順](docs/GITHUB_SETUP.ja.md)を参照してください。
 
 ```sh
 ./script/build_and_run.sh --build  # Debugをビルドするだけ

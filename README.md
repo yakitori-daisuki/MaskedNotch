@@ -18,7 +18,7 @@ External, mirrored, offline, and non-notched displays are excluded. Menus suppor
 
 From the repository folder:
 
-Get the source with `git clone https://github.com/yakitori-daisuki/MaskedNotch.git`, then `cd MaskedNotch`. Private repository access requires authorization. For this working folder's separate GitHub account configuration, see the [setup notes (Japanese)](docs/GITHUB_SETUP.ja.md).
+Get the source with `git clone https://github.com/yakitori-daisuki/MaskedNotch.git`, then `cd MaskedNotch`. For this working folder's separate GitHub account configuration, see the [setup notes (Japanese)](docs/GITHUB_SETUP.ja.md).
 
 ```sh
 ./script/build_and_run.sh --build  # Build Debug without launching
