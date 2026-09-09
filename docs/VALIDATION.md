@@ -132,7 +132,7 @@ XcodeのAppIntentsメタデータ抽出スキップ警告、およびテスト�
 - DebugはXcodeのget-task-allow付き。Releaseは `CODE_SIGN_INJECT_BASE_ENTITLEMENTS=NO` でデバッグ権限の注入を止めています。
 - Developer ID署名、archiveによる配布、notarytool、公証、staple、Gatekeeper配布検証は未実施。
 - Vendorの8ファイルを固定コミットのチェックサム記録と照合して一致。
-- アプリのResourcesにSkyLightWindowのMIT全文、自作コードのMIT全文、THIRD_PARTY_NOTICESを同梱。
+- アプリのResourcesにSkyLightWindowのMIT全文、自作コードのGPLv3全文、THIRD_PARTY_NOTICESを同梱。
 - 実行ターゲットに組み込むOSS由来コードはSkyLightBridgeだけ。パッケージのネットワーク解決はない。
 
 ## 未検証・未解決条件

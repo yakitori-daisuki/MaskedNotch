@@ -1,5 +1,8 @@
 # Third-party notices
 
+Masked Notch as a whole is distributed under GPL-3.0-only; see LICENSE.
+The third-party MIT notices below are retained and do not change the project license.
+
 ## Incorporated code: SkyLightWindow
 
 - Upstream: https://github.com/Lakr233/SkyLightWindow

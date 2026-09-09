@@ -154,4 +154,4 @@ python3 script/test_unsigned_installer.py # 先にインストーラを生成
 
 `Sources/MaskedNotch/` がアプリ本体とロック画面連携、`Sources/MaskedNotchCore/` が位置・表示状態の処理、`Tests/` がCore／AppKitテスト、`script/` がビルド・配布・開発用診断です。
 
-[MITライセンス](LICENSE)。[SkyLightWindow](https://github.com/Lakr233/SkyLightWindow)の固定版の一部を改変しMITで同梱しています。[第三者ソフトウェアの通知](THIRD_PARTY_NOTICES.md)を参照してください。アプリ本体にネットワーク通信や分析機能はありません。画面撮影は別の開発用診断スクリプトだけにあり、アプリには含まれません。
+Copyright (c) 2026 Masked Notch contributors。[GNU GPL バージョン3のみ](LICENSE)（`GPL-3.0-only`）で公開します。改変版・結合したプログラムを配布する場合は、受領者への対応するソースの提供などGPLv3の条件を守る必要があります。私的な利用・改変に一般公開の義務はありません。無保証です。過去にMITで公開した版には元のライセンスが引き続き適用されます。[SkyLightWindow](https://github.com/Lakr233/SkyLightWindow)の固定版の一部を改変しMITで同梱しています。[第三者ソフトウェアの通知](THIRD_PARTY_NOTICES.md)を参照してください。アプリ本体にネットワーク通信や分析機能はありません。画面撮影は別の開発用診断スクリプトだけにあり、アプリには含まれません。

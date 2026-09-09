@@ -86,11 +86,15 @@ final class StatusMenu: NSObject, NSMenuDelegate {
             }
         }
         let details = String(format: NSLocalizedString("A menu bar app that displays a black band over the notch area.\nYour wallpaper images, videos, and settings are left unchanged.\n\nRendering mode: %@\n\nRunning app location:\n%@", comment: ""), mode, bundle.bundlePath)
+        let credits = NSMutableAttributedString(string: details + "\n\nCopyright © 2026 Masked Notch contributors\n" + NSLocalizedString("Licensed under GPL-3.0-only. You may redistribute and modify this program under GPLv3. No warranty.", comment: ""), attributes: [.font: NSFont.systemFont(ofSize: 12)])
+        if let licenseURL = bundle.url(forResource: "MaskedNotch-LICENSE", withExtension: "txt") {
+            credits.append(NSAttributedString(string: "\nGNU GPL v3", attributes: [.link: licenseURL]))
+        }
         NSApp.orderFrontStandardAboutPanel(options: [
             .applicationName: bundle.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "Masked Notch",
             .applicationVersion: bundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? NSLocalizedString("Unknown", comment: ""),
             .version: bundle.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? NSLocalizedString("Unknown", comment: ""),
-            .credits: NSAttributedString(string: details, attributes: [.font: NSFont.systemFont(ofSize: 12)])
+            .credits: credits
         ])
         NSApp.activate()
         Diagnostics.event("menu about opened")
