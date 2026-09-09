@@ -1,5 +1,7 @@
 # Masked Notch
 
+<img src="docs/images/masked-notch-icon.png" alt="Masked Notch app icon: a display with a black strip across its top" width="160" height="160">
+
 English | [日本語](README.ja.md)
 
 A small Swift/AppKit menu bar app that draws a black strip across the top of a built-in notched display. It leaves wallpaper, aerial videos, and screensaver settings alone.

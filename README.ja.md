@@ -1,5 +1,7 @@
 # Masked Notch
 
+<img src="docs/images/masked-notch-icon.png" alt="Masked Notch：ディスプレイの上端を黒い帯で覆うアプリアイコン" width="160" height="160">
+
 [English](README.md) | 日本語
 
 ノッチ付き内蔵ディスプレイの上端に黒い帯を表示する、小さなmacOSメニューバーアプリです。SwiftとAppKitで実装し、壁紙・標準空撮・スクリーンセーバの設定は変更しません。
